@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Titillium+Web:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Sniglet&display=swap');
+    body{
+        /* display: flex !important; */
+        /* flex-direction: column !important; */
+        min-height: 100vh !important;
+    }
+    #contact{
+        /* margin-top: auto !important; */
+        position: sticky !important;
+        /* bottom: 0; */
+        /* left: 0; */
+        width: 100%;
+        top: 100% !important;
+    }
+   header, .navbar{
+        background-color: #fec233 !important;
+        font-family: 'Cormorant SC', serif;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+        transition: 0.5s;
+    }
+    #home{
+        margin-top: 97px;
+    }
+    .ff{
+        font-family: 'Roboto Slab', serif;
+        font-family: 'Sniglet', cursive;
+    }
+    .nav-link{
+        padding: 20px 23px !important;
+    }
+    .btn1{
+        background-color: #fec233;
+        border-radius: 20px;
+        width: 130px;
+        padding-bottom: 6px;
+        color: white;
+    }
+    .btn1:hover{
+        box-shadow: 0px 0px 0px 3px #f9990a, 0px 0px 0px 7px #f98253;
+    }
+    .txt{
+        font-weight: 700;
+        font-size: 35px;
+    }
+    .txt1{
+        font-weight: 700;
+        font-size: 55px;
+    }
+    .img1{
+        animation: floatimage 4s ease-in-out infinite;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        
+    }
+    @keyframes floatimage{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-2.4rem);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+    .bg{
+        background-color: #fec233;
+    }
+    #ab1{
+        background-color: white;
+        transition: 0.5s;
+        padding: 30px;
+        border-radius: 100px
+    }
+    #ab11{
+        background-color: white;
+        transition: 0.5s;
+        padding: 30px;
+        border-radius: 30px
+    }
+    #more, #more1, #more2, #more3{
+        display: none;
+    }
+    .crd{
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+        transition: 0.5s;
+    }
+    .bx{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        color: #fec233  ;
+    }
+    .navbar-collapse ul li a:hover , .navbar-collapse ul li a.active{
+        color: black !important;
+    }
+    .nav-link{
+        color: white !important;
+        transition: .2s;
+    }
+    .ic{
+        color: white;
+        font-size: 55px;
+    }
+    .con{
+        border-radius: 0;
+        /* background-color: rgb(224, 222, 222); */
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        border-radius: 100px;
+        background-image: linear-gradient(yellow,#fec233);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    }
+    .grid-item {
+        padding: 30px 0px;
+        border-radius: 100px !important;
+        text-align: center;
+        transition: .2s;
+        cursor: pointer;
+
+    }
+    .grid-item:hover{
+        background-color: #f9990a !important;
+        transition: .2s;
+
+    }
+    .ac{
+        text-decoration: none !important;
+    }
+    .crd img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .imga{
+        object-fit: contain;
+    }
+    .de{
+        color: black;
+        text-decoration: underline;
+        transition: .2s;
+
+    }
+    .de:hover{
+        color: white;
+        transition: .2s;
+    }
+    @media screen and (max-width: 991px) {
+        .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "n1 n1" 
+        "n2 n2" 
+        "n3 n3" 
+        "n4 n4" 
+        "n5 n5";
+        border-radius: 55px;
+        }
+        .n5{
+            grid-area: n5;
+        }
+        .grid-item {
+         padding: 20px 0px;
+        }
+        #ab1{
+            border-radius: 75px;
+        }
+        .img1 img, .imga{
+            width: 80%;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .crd{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .img1{
+            margin-top: 40px;
+        }
+        .imga{
+            margin-bottom: 52px;
+        }
+        .txt, .txt1, .tp , .bt{
+            text-align: center;
+        }
+        .img1 img, .imga{
+            width: 63% !important;
+        }
+        
+    }
+    @media screen and (max-width: 575px) {
+        #ab11, #ab1{
+            border-radius: 0 !important;
+        }
+        
+    }
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" width="70px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about"about>About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
+
+    <!-- Section 1 Intro and Picture -->
+    <section id="home">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 justify-content-center d-flex flex-column">
+                    <h3 class="txt ff">Hello It's Me.</h3>
+                    <h1 class="txt1 ff">Jeiya Khatri</h1>
+                    <h3 class="txt ff">And I am Data Analyst</h3>
+                    <p class="ff tp"> with expertise in various tools including Microsoft Excel, MySQL, and Google Spreadsheets API. I also have experience in creating analytical presentations and working with databases for effective data cleansing and analysis.</p>
+                    <div class="bt">
+                        <a href="Jeiya's Resume.pdf" download="Jeiya's Resume" ><button class="btn btn1 ff">Download CV</button></a>
+                    </div>
+                </div>
+                <div class="col-md-6 img1">   
+                        <img src="img/img1.jpg" width="63%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Section 2 About -->
+    <section id="about">
+        <div class="bg">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-5 justify-content-center d-flex align-items-center">
+                        <img src="img/11.png" class="imga" alt="" height="100%" width="63%">
+                    </div>
+                    <div class="col-md-7" id="ab11">
+                        <h3 class="txt ff">About Me</h3>
+                        <p class="ff">Hey there! I'm Jeiya Kumari, an accomplished freelancer specializing in data analysis, data visualization, WordPress, project management, and UI/UX prototyping. With a solid skill set and practical experience, I'm your go-to partner for turning ideas into impactful solutions.
+Skills:
+Data Analysis: Expertise in Microsoft Excel, MySQL, and data cleansing techniques for actionable insights.
+Project Management: Proficient in Microsoft Projects for effective planning and timelines.
+UI/UX Prototyping: Skilled in Java GUI and crafting seamless user experiences.
+Collaboration: Familiar with Google Spreadsheets API for streamlined teamwork.
+                            <span id="dots">.....</span>
+                            <div class="ff" id="more">                                   
+                             </p>Experience:
+I've successfully tackled projects, translating complex data into actionable strategies, and collaborating on user-friendly interfaces.
+Let's Connect:
+Looking for someone who brings analytical skills and project finesse? Let's collaborate!
+Excited to work together!
+                            </div>
+                        </p>
+                        <button onclick="readmore()" id="rbtn" class="btn btn1 ff">Read more</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Section 3 cards -->
+   <section id="services">
+    <div class="py-5">
+        <div class="container">
+            <h3 class="txt ff text-center mb-5">Our Services</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card crd"> 
+                        <div class="card-body text-center">   
+                            <i class='bx bx-box mb-3'></i>
+                            <h3 class="ff text-center">Data Analyst</h3>
+                            <p class="ff mb-3">I'm Data Analyst with a knack for data cleansing using SQL, Google Spreadsheets, and Cloud BigQuery. 
+                                <span id="dots1">.....</span>
+                                <div class="ff" id="more1">
+                                    <p>I meticulously ensure data accuracy and use my proficiency in SQL for efficient data management. With expertise in Google Spreadsheets and Cloud BigQuery, I transform raw data into insightful trends.
+
+                                        I excel in extracting meaningful insights from various data sets through tools like Google Spreadsheets and SQL. My Cloud BigQuery proficiency involves complex queries for valuable data extraction. With strong data entry and cleaning skills, along with advanced Cloud BigQuery expertise, I'm a versatile Data Analyst equipped to decode complex data with technical skill and creativity. I'm eager to contribute my skills and passion to your projects.</p>
+                                </div>
+                            </p>
+                            <button onclick="readmore1()" id="rbtn1" class="btn btn1 ff">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card crd">
+                        <div class="card-body text-center">   
+                            <i class='bx bx-task mb-3'></i>
+                            <h3 class="ff text-center">Virtual Assistant</h3>
+                            <p class="ff mb-3">Virtual Assistant services that can greatly contribute to your endeavors. I am proficient in 
+                                <span id="dots2">.....</span>
+                                <div class="ff" id="more2">
+                                    <p>WordPress website development, capable of bringing your ideas to life online. Additionally, I possess the skills to create engaging documentaries and design compelling presentations using Microsoft PowerPoint and Word.
+
+                                        Beyond that, I excel in tasks like Data Entry, Web Research, and Data Management. Whether you need meticulous data solutions or advanced web research, I am equipped to provide effective solutions. My commitment to excellence ensures that tasks are completed with accuracy and efficiency. With clear communication and a dedicated approach, I aim to enhance your projects and streamline tasks as your virtual assistant. Feel free to explore my diverse skill set, knowing that your needs are in capable hands.</p>
+                                </div>
+                            </p>
+                            <button onclick="readmore2()" id="rbtn2" class="btn btn1 ff">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card crd">     
+                        <div class="card-body text-center">   
+                            <i class='bx bxl-java mb-3'></i>
+                            <h3 class="ff text-center">Java</h3>
+                            <p class="ff mb-3">I possess comprehensive expertise in Java programming, encompassing Object-Oriented Programming (OOP), 
+                                <span id="dots3">.....</span>
+                                <div class="ff" id="more3">
+                                    <p>database management, graphical user interface (GUI) development, and more. With a strong foundation in OOP principles, I adeptly design and implement solutions that are efficient, scalable, and maintainable.
+
+                                        One of the practical manifestations of my Java proficiency is the development of a School Management System in 2022. This project not only showcased my programming skills but also demonstrated my project management capabilities. Additionally, my proficiency extends to database management, enabling me to seamlessly integrate and manipulate data within applications. Furthermore, I am well-versed in creating user-friendly GUIs that enhance the user experience. From concept to execution, I thrive on turning complex challenges into elegant solutions using Java. With a commitment to continuous learning, I am excited to apply my Java skills to add value to your projects and drive innovation.</p>
+                                </div>
+                            </p>
+                            <button onclick="readmore3()" id="rbtn3" class="btn btn1 ff">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+    <!-- Section 4 contact -->  
+    <section id="contact">
+        <div class="bg">
+            <div class="container pt-5" >
+                    <div class="">
+            <h3 class="txt ff text-center mb-5">Contact Me</h3>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8" id="ab1">
+                                <div class="grid-container">
+                                    <div class="grid-item n1">
+                                        <a href="https://www.linkedin.com/in/jeiyakumari/"  class="ac">
+                                            <span class="icc">
+                                                <i class='bx bxl-linkedin ic' ></i>
+                                                <h6 class="ff text-white mb-0">Linkedin</h6>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-item n2">                                    
+                                         <a href="https://www.fiverr.com/jeiyakhatri/be-your-virtual-assistant-specializing-in-data-entry-and-web-research-tasks?context_referrer=logged_in_homepage&source=by_recently_viewed&ref_ctx_id=2eac8d0c8e6516df181173a19b4624ac&context=recommendation&pckg_id=1&pos=2&context_alg=recently_viewed&seller_online=true&imp_id=404a182b-301b-44a4-b7fc-c578b2d82c84" class="ac">
+                                            <span class="icc">
+                                                <i class='bx bx-laptop ic'></i>
+                                        <h6 class="ff text-white mb-0">Fiverr</h6>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-item n3">                                      
+                                        <a href="mailto:jeiyakumari@gmail.com"  class="ac">
+                                            <span class="icc">
+                                                <i class='bx bxl-gmail ic' ></i>
+                                        <h6 class="ff text-white mb-0">Gmail</h6>
+                                            </span>
+                                        </a>
+                                    </div>  
+                                    <div class="grid-item n4">   
+                                        <a href="https://github.com/K-Jeiya"  class="ac">
+                                            <span class="icc">
+                                                <i class='bx bxl-github ic' ></i>
+                                        <h6 class="ff text-white mb-0">Github</h6>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-item n5">
+                                        <a href="https://www.upwork.com/freelancers/~017b49e7ead314ec53"  class="ac">
+                                            <span class="icc">
+                                                <i class='bx bxl-upwork ic' ></i>
+                                        <h6 class="ff text-white mb-0">Upwork</h6>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="colmd-2"></div>
+                        </div>
+                    </div>
+               <h6 class="ff text-center py-5 mb-0">Copyright © 2023 | Design By <a class="de" href="mailto:jeiyakumari@gmail.com">JeiyaKhatri</a></h6>
+            </div>
+        </div>
+    </section>
+
+    <script class="text/javascript">
+        function readmore(){
+            var dots = document.getElementById('dots');
+            var moretext = document.getElementById('more');
+            var rmbtn = document.getElementById('rbtn');
+            var tr = document.getElementById("ab1")
+
+            if(dots.style.display === "none"){
+                dots.style.display = "inline";
+                rmbtn.innerHTML = "Read more";
+                moretext.style.display = 'none'; 
+               tr.style.transition = "0.5s";
+
+                
+            }else{
+                dots.style.display = 'none';
+                rmbtn.innerHTML = "Read less";
+                moretext.style.display = 'inline';
+               tr.style.transition = "0.5s";
+
+            }
+        }
+
+        function readmore1(){
+            var dots = document.getElementById('dots1');
+            var moretext = document.getElementById('more1');
+            var rmbtn = document.getElementById('rbtn1');
+            var tr = document.getElementById("ab1")
+
+            if(dots.style.display === "none"){
+                dots.style.display = "inline";
+                rmbtn.innerHTML = "Read more";
+                moretext.style.display = 'none'; 
+               tr.style.transition = "0.5s";
+
+                
+            }else{
+                dots.style.display = 'none';
+                rmbtn.innerHTML = "Read less";
+                moretext.style.display = 'inline';
+               tr.style.transition = "0.5s";
+
+            }
+        } function readmore2(){
+            var dots = document.getElementById('dots2');
+            var moretext = document.getElementById('more2');
+            var rmbtn = document.getElementById('rbtn2');
+            var tr = document.getElementById("ab1")
+
+            if(dots.style.display === "none"){
+                dots.style.display = "inline";
+                rmbtn.innerHTML = "Read more";
+                moretext.style.display = 'none'; 
+               tr.style.transition = "0.5s";
+
+                
+            }else{
+                dots.style.display = 'none';
+                rmbtn.innerHTML = "Read less";
+                moretext.style.display = 'inline';
+               tr.style.transition = "0.5s";
+
+            }
+        } function readmore3(){
+            var dots = document.getElementById('dots3');
+            var moretext = document.getElementById('more3');
+            var rmbtn = document.getElementById('rbtn3');
+            var tr = document.getElementById("ab1")
+
+            if(dots.style.display === "none"){
+                dots.style.display = "inline";
+                rmbtn.innerHTML = "Read more";
+                moretext.style.display = 'none'; 
+               tr.style.transition = "0.5s";
+
+                
+            }else{
+                dots.style.display = 'none';
+                rmbtn.innerHTML = "Read less";
+                moretext.style.display = 'inline';
+               tr.style.transition = "0.5s";
+
+            }
+        }
+
+        let section = document.querySelectorAll('section')
+        let navLink = document.querySelectorAll('ul li a')
+        window.onscroll=()=>{
+            section.forEach(sec=>{
+                let top = window.scrollY;
+                let offset = sec.offsetTop-600;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id')
+                if(top>offset && top<offset+height){
+                    navLink.forEach(links=>{
+                        links.classList.remove('active')
+                        document.querySelector('ul li a[href*='+id+']').classList.add('active')
+                    })
+                }
+            })
+        }
+
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>    
+</body>
+</html>
