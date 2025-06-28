@@ -39,6 +39,14 @@ This site highlights my skills, projects, and experience as a **Data Engineer** 
 
 ---
 
+## 📬 Contact
+
+- 📧 Email: [jeiyakumari@gmail.com](mailto:jeiyakumari@gmail.com)  
+- 💻 GitHub: [github.com/K-Jeiya](https://github.com/K-Jeiya)  
+- 🔗 LinkedIn: [linkedin.com/in/jeiyakumari](https://linkedin.com/in/jeiyakumari)  
+
+---
+
 ## 📁 Folder Structure
 
 ```bash
@@ -51,8 +59,3 @@ Jeiya-Portfolio/
 ├── script.js
 └── README.md
 
-## 📬 Contact
-
-- 📧 Email: [jeiyakumari@gmail.com](mailto:jeiyakumari@gmail.com)  
-- 💻 GitHub: [github.com/K-Jeiya](https://github.com/K-Jeiya)  
-- 🔗 LinkedIn: [linkedin.com/in/jeiyakumari](https://linkedin.com/in/jeiyakumari)  
