@@ -59,3 +59,17 @@
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const items = [
+      document.querySelector('.footer-logo'),
+      document.querySelector('.footer-social'),
+      document.querySelector('.footer-bottom')
+    ];
+
+    items.forEach((el, i) => {
+      if (el) setTimeout(() => el.classList.add('animate__fadeInUp'), i * 300);
+    });
+  });
