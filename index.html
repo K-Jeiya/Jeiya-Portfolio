@@ -43,54 +43,54 @@
 </div>
 <!-- Header End -->
 
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1>Hi, I'm Jeiya Kumari👋</h1>
+      <h2>Data Engineer | Data Analyst</h2>
+      <p>
+          I’m a Data Engineer focused on building data pipelines, ETL workflows, and cloud-based systems that transform data into insights. 
+          Experienced with Python, SQL, Airflow, and modern cloud platforms including AWS and GCP.
+      </p>
+      <a href="assets/documents/Jeiya_Kumari_Resume.pdf" class="cta-button" download>Download CV</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/profile.jpg" alt="Jeiya Kumari" />
+    </div>
+  </div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Jeiya Kumari</h1>
-                <h2>Data Engineer & Full Stack Developer</h2>
-                <p>
-                    Computer Science Graduate specializing in Data Engineering with expertise in building scalable data
-                    pipelines and full-stack applications. Passionate about transforming raw data into meaningful
-                    insights.
-                </p>
-                <a href="assets/documents/Jeiya_Kumari_Resume.pdf" class="cta-button" download>Download CV</a>
-            </div>
-            <div class="hero-image">
-                <img src="assets/images/profile.jpg" alt="Jeiya Kumari" />
-            </div>
-        </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about">
+<!-- About Section -->
+<section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="hero-image">
                 <img src="assets/images/profile-left.jpg" alt="Jeiya Kumari" />
             </div>
             <div class="about-text">
-                <p>Hello! I'm Jeiya Kumari, a passionate Computer Science graduate with a strong focus on Data
-                    Engineering and Full Stack Development. My journey in technology has been driven by curiosity and a
-                    desire to solve complex problems through innovative solutions.</p>
-
-                <p>With hands-on experience gained through a 4-month internship at NIP NIC, I've developed expertise in
-                    designing and implementing robust data pipelines, managing large-scale databases, and creating
-                    efficient data processing systems. While I'm proficient in full-stack development, my true passion
-                    lies in the realm of data engineering where I excel at turning raw data into actionable insights.
-                </p>
-
-                <p>I believe in continuous learning and staying updated with the latest technologies in the data
-                    engineering ecosystem. My goal is to contribute to projects that make a meaningful impact through
-                    data-driven decision making.</p>
+              <p>
+                A Computer Science graduate with a strong focus on <b>Data Engineering</b> and modern analytics. 
+                I enjoy designing scalable data pipelines and transforming raw information into clear, valuable insights.
+              </p>
+          
+              <p>
+                Currently enrolled in the <b>Certified Data Engineering Program</b> at <b>Karachi.AI & NUST</b>, 
+                where I’m building hands-on expertise in <b>Python, SQL, Airflow, AWS, and GCP</b>. 
+                I’ve also completed a 4-month internship at the <b>National Expansion Plan of NICs</b>, 
+                gaining real experience in data preprocessing and dashboard development.
+              </p>
+          
+              <p>
+                I’m driven by curiosity and continuous learning, always exploring new tools to create efficient, 
+                data-driven solutions that make a real impact.
+              </p>
             </div>
         </div>
-    </section>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+<!-- Skills Section -->
+<section id="skills">
         <h2 class="section-title">Skills & Expertise</h2>
         <div class="skills-grid">
             <div class="skill-card">
@@ -165,76 +165,128 @@
                 </ul>
             </div>
         </div>
-    </section>
+</section>
 
 <!-- Projects Section -->
 <section id="projects">
   <h2 class="section-title">Projects & Achievements</h2>
   <div class="projects-grid">
 
-    <!-- School Management System -->
+    <!-- Complaints ETL Pipeline -->
     <div class="project-card">
-      <h3>School Management System (Java + Database)</h3>
-      <p>A complete school management application built using Java and database integration. Features include student records, fee tracking, and administrative operations.</p>
-      <a href="https://github.com/K-Jeiya/SchoolManagementSystem.git" target="_blank">🔗 View on GitHub</a>
+      <h3>Complaints ETL Pipeline (Airflow · MySQL · Google Sheets)</h3>
+      <p>Built an end-to-end ETL pipeline for CFPB complaint data using Apache Airflow. Automated data extraction, transformation, and loading into MySQL and Google Sheets with email alerts.</p>
+      <a href="https://github.com/K-Jeiya/ETL-Pipeline-with-Airflow" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Hubway Bikes Data Pipeline -->
+    <div class="project-card">
+      <h3>Hubway Bikes Data Pipeline (PySpark · MongoDB)</h3>
+      <p>Developed a PySpark workflow to clean, join, and enrich bike trip datasets. Generated monthly and state-based summaries, then loaded final results into MongoDB for analytics.</p>
+      <a href="https://github.com/K-Jeiya/Hubway-Bike-ETL-Pipeline" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Live Poll App -->
+    <div class="project-card">
+      <h3>Live Poll App (Kafka · Streamlit · Python)</h3>
+      <p>Created a real-time polling dashboard using Kafka and Streamlit. Simulated live votes via Python producer and displayed instant results through interactive charts and metrics.</p>
+      <a href="https://github.com/K-Jeiya/Live-Poll-App-Kafka-Streamlit" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- GenAI Startup Idea App -->
+    <div class="project-card">
+      <h3>GenAI Startup Idea App (Streamlit · Gemini API)</h3>
+      <p>Designed a multi-page Streamlit app for NIC that uses the Gemini API to generate personalized startup ideas from user inputs and keywords. Includes dynamic UI and export options.</p>
+      <a href="https://jeiya-nicgenaiapp-y4xc8kdukw6nqvkmvavq9d.streamlit.app/" target="_blank">🔗 Live Demo</a>
+    </div>
+
+    <!-- News to Humor LLM App -->
+    <div class="project-card">
+      <h3>News to Humor LLM App (Python · Flask · LLM API)</h3>
+      <p>Built a Flask-based REST API that fetches trending news and rewrites them into humorous stories using LLMs (Groq / Hugging Face). Modular, clean backend structure.</p>
+      <a href="https://github.com/K-Jeiya/News-to-Humor-and-Lab-Scraper" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Watchpoint Simulator -->
+    <div class="project-card">
+      <h3>Watchpoint Simulator (Unity · AI · Behavior Trees)</h3>
+      <p>Final Year Project: Simulated realistic crowd and security behavior using Unity and AI-driven behavior trees. Included dynamic item interaction and customer logic.</p>
     </div>
 
     <!-- AJ Recipe Website -->
     <div class="project-card">
-      <h3>AJ Recipe Website (Team Project)</h3>
-      <p>A responsive recipe web app with intuitive UI to explore and search food recipes. Built collaboratively using HTML, CSS, and JavaScript.</p>
+      <h3>AJ Recipe Website (HTML · CSS · JavaScript)</h3>
+      <p>Developed a responsive recipe website as part of a team project. Users can explore and search recipes through an intuitive and user-friendly interface.</p>
       <a href="https://alishaayyyy.github.io/AJ-project/" target="_blank">🔗 Visit Live Website</a>
     </div>
 
-    <!-- Salt'n Paper Website -->
+    <!-- School Management System -->
     <div class="project-card">
-      <h3>Website Developer – Salt'n Paper</h3>
-      <p>Designed and developed a fully responsive website for a restaurant using HTML, CSS, and Bootstrap. Enhanced UI/UX for a better customer experience.</p>
-      <a href="https://k-jeiya.github.io/Snp_Website/" target="_blank">🔗 Visit Live Website</a>
+      <h3>School Management System (Java · Database)</h3>
+      <p>Created a complete school management application using Java and MySQL. Included modules for student records, fee tracking, and admin operations.</p>
+      <a href="https://github.com/K-Jeiya/SchoolManagementSystem.git" target="_blank">🔗 View on GitHub</a>
     </div>
 
   </div>
 </section>
 
 
+<!-- Experience Section -->
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-card">
-            <h3>Data Engineering Intern</h3>
-            <div class="company">NIP NIC (National Informatics Centre)</div>
-            <div class="duration">4 months</div>
-            <p>During my internship at NIP NIC, I gained valuable hands-on experience in data engineering and government
-                data systems. I worked on developing and optimizing data pipelines, implementing ETL processes for
-                large-scale government databases, and contributing to data migration projects. This experience enhanced
-                my understanding of data governance, security protocols, and the importance of reliable data
-                infrastructure in public sector applications.</p>
-        </div>
-    </section>
+    <div class="experience-card">
+        <h3>Business Development Executive</h3>
+        <div class="company">Harvest Group</div>
+        <div class="duration">September 2025 – Present</div>
+        <p>Build and maintain client relationships to support company growth. Identify new business opportunities and assist in proposal preparation. Collaborate with internal teams to meet client requirements and deadlines.</p>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <p>I'm always interested in discussing new opportunities, collaborating on data engineering projects, or
-                simply connecting with fellow tech enthusiasts. Feel free to reach out!</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h4>Email</h4>
-                    <p>jeiyakumari@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <h4>LinkedIn</h4>
-                    <p>linkedin.com/in/jeiyakumari/</p>
-                </div>
-                <div class="contact-item">
-                    <h4>GitHub</h4>
-                    <p>github.com/K-Jeiya</p>
-                </div>
+    <div class="experience-card">
+        <h3>Data Management Intern</h3>
+        <div class="company">National Expansion Plan of NICS</div>
+        <div class="duration">February 2024 – May 2024</div>
+        <p>Managed and organized startup data for tracking and reporting. Supported data cleaning and preprocessing using Excel and Python. Assisted in generating visual dashboards for internal performance metrics.</p>
+    </div>
+
+    <div class="experience-card">
+        <h3>Business & Web Support</h3>
+        <div class="company">Freelance</div>
+        <div class="duration">2023 –  2025</div>
+        <p>Provided responsive and client-centric web solutions using HTML, CSS, and JavaScript. Maintained clear records of client requirements and project milestones. Shared regular project updates and addressed client queries to ensure satisfaction. Assisted in data entry, customer record management, and performance reporting through spreadsheets.</p>
+    </div>
+
+    <div class="experience-card">
+        <h3>Digital Creator</h3>
+        <div class="company">Instagram (Self-managed)</div>
+        <div class="duration">2025 – Present</div>
+        <p>Manage personal Instagram account focused on digital content creation and product reviews. Create engaging posts and reels to connect with audiences. Collaborate with small brands to provide authentic feedback and creative insights.</p>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-content">
+        <p>I'm always interested in discussing new opportunities, collaborating on data engineering projects, or
+            simply connecting with fellow tech enthusiasts. Feel free to reach out!</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h4>Email</h4>
+                <p>jeiyakumari@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/jeiyakumari/</p>
+            </div>
+            <div class="contact-item">
+                <h4>GitHub</h4>
+                <p>github.com/K-Jeiya</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <!-- Footer Start -->
 <footer class="modern-footer">
