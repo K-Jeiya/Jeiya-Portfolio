@@ -684,13 +684,13 @@ section {
 }
 
 /* Social Media Hover Colors */
-.social-icon:nth-child(1):hover { background: #333333; }   /* GitHub - dark gray */
-.social-icon:nth-child(2):hover { background: #0077B5; }   /* LinkedIn - blue */
-.social-icon:nth-child(3):hover { background: #25D366; }   /* WhatsApp - green */
-.social-icon:nth-child(4):hover { background: #E4405F; }   /* Instagram - pink/red gradient tone */
-.social-icon:nth-child(5):hover { background: #2557a7; }   /* Indeed - deep blue */
-.social-icon:nth-child(6):hover { background: #D44638; }   /* Gmail - red */
-.social-icon:nth-child(7):hover { background: #FFA116; }   /* LeetCode - orange */
+.social-icon:nth-child(1):hover { background: #333333; }   
+.social-icon:nth-child(2):hover { background: #0077B5; }   
+.social-icon:nth-child(3):hover { background: #25D366; }   
+.social-icon:nth-child(4):hover { background: #E4405F; }   
+.social-icon:nth-child(5):hover { background: #2557a7; }  
+.social-icon:nth-child(6):hover { background: #D44638; }   
+.social-icon:nth-child(7):hover { background: #FFA116; }   
 
 
 .footer-bottom {
